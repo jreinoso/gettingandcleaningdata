@@ -20,12 +20,17 @@ Via Opera Pia 11A, I-16145, Genoa, Italy.
 activityrecognition@smartlab.ws
 www.smartlab.ws
 
+The original dataset is known as the UCI-HAR Dataset.
+
 The experiment consisted on recording several parameters taken from a signal based on a Samsung Smartphone.  Each of 30 subects carried the device executing several activities as (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING).   
 
 The complete description of this original data set can be found at:  http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 ###Transformation Algorithm
 
-A new data set (output.txt) was created based on the following transformations.
-1. Only those variables regarding mean and standart deviation information were taking into account
+The UCI-HAR dataset provides two diferent folders:  Test and Train.   Both folders contains the same file structure that consists on an X, Y and Subject information.  
 
+A new data set (output.txt) was created based on the following transformations.
+2. The first step was to setup the correct working directory on R such that the two folders (Test and Train) where located under thisone.  So, ./test/ should allow to acces the Xtest, Ytest and Subjecttest files while the ./train/ path should allow to acces the Xtrain, Ytrain and Sujecttrain files.
+2. Only those variables regarding mean and standart deviation from the UCI-HAR dataset where copied to the new dataset.
+2. The UCI-HAR dataset provides two sources:  test and train folders.  Both folders contained the same amount of files.  The 
