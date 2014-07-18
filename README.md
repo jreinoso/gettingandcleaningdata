@@ -1,4 +1,3 @@
-gettingandcleaningdata
-======================
+Getting & Cleaning Data Course Project
 
-For Getting and Cleaning Data project
+Hi everybody..   This is a repo for the Getting & Cleaning Data Course Project from Coursera.
