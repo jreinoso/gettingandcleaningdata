@@ -101,12 +101,12 @@ dt <- cbind(dt,dt2)
 # STEP 5:  Changing activity ID for a Descriptive Activity
 dt$activity <- as.character(dt$activity)
 
-dt$Activity[dt$activity=="1"] <- "WALKING"
-dt$Activity[dt$activity=="2"] <- "WALKING_UPSTAIRS"
-dt$Activity[dt$activity=="3"] <- "WALKING_DOWNSTAIRS"
-dt$Activity[dt$activity=="4"] <- "SITTING"
-dt$Activity[dt$activity=="5"] <- "STANDING"
-dt$Activity[dt$activity=="6"] <- "LAYING"
+dt$activity[dt$activity=="1"] <- "WALKING"
+dt$activity[dt$activity=="2"] <- "WALKING_UPSTAIRS"
+dt$activity[dt$activity=="3"] <- "WALKING_DOWNSTAIRS"
+dt$activity[dt$activity=="4"] <- "SITTING"
+dt$activity[dt$activity=="5"] <- "STANDING"
+dt$activity[dt$activity=="6"] <- "LAYING"
 
 # STEP 6:   Creating second data frame getting mean of all variables grouping by subjectId and Activity 
 dt2 <- aggregate(dt[,1:66],list(dt$activity,dt$subjectId), FUN=mean)
@@ -146,3 +146,5 @@ colnames(dt2) <- c("activity", "subjectId",
                    "mean_fftBodyBodyGyroJerkMagMean",
                    "mean_fftBodyBodyGyroMagStd")
 
+
+write.csv(file="output.txt",x=dt2)
